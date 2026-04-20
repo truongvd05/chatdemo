@@ -1,0 +1,6 @@
+[submodule "fe-chat-bot"]
+	path = fe-chat-bot
+	url = https://github.com/truongvd05/fe-chat-bot
+[submodule "be-chat-bot"]
+	path = be-chat-bot
+	url = https://github.com/truongvd05/chat-bot
