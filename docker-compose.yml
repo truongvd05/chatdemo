@@ -21,7 +21,9 @@ services:
             - "6379:6379"
 
     backend:
-        build: ./be-chat-bot
+        build:
+            context: ./be-chat-bot
+            dockerfile: Dockerfile.dev
         ports:
             - "3000:3000"
         volumes:
@@ -63,7 +65,9 @@ services:
                 condition: service_started
 
     frontend:
-        build: ./fe-chat-bot
+        build:
+            context: ./fe-chat-bot
+            dockerfile: Dockerfile.dev
         ports:
             - "8080:80"
         volumes:
