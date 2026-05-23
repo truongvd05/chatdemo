@@ -1,0 +1,18 @@
+import baseQuery from "@/services/baseQuery";
+import { createApi } from "@reduxjs/toolkit/query/react";
+
+export const authApi = createApi({
+    reducerPath: "authApi",
+    baseQuery: baseQuery,
+    endpoints: (builder) => ({
+        login: builder.mutation({
+            query: (data) => ({
+                url: "admin/login",
+                method: "POST",
+                body: data,
+            }),
+        }),
+    }),
+});
+
+export const { useLoginMutation } = authApi;
